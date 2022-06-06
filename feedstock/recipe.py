@@ -3,8 +3,9 @@ from pangeo_forge_recipes.patterns import FilePattern, ConcatDim, MergeDim
 
 # Make FilePattern
 
-# Include all 41 years and the variables pertinent to air-sea flux calculations
-years = list(range(46,87))
+# Include 36 years and the variables pertinent to air-sea flux calculations
+# (Note: U10 has missing files for years 49 and 50, so only including years 51 and beyond)
+years = list(range(51,87))
 variables = [
     "LHFLX",
     "SHFLX",
