@@ -3,9 +3,13 @@ from pangeo_forge_recipes.patterns import FilePattern, ConcatDim, MergeDim
 
 # Make FilePattern
 
-# Include 36 years and the variables pertinent to air-sea flux calculations
-# (Note: U10 has missing files for years 49 and 50, so only including years 51 and beyond)
-years = list(range(51,87))
+# 9 year date range for the variables needed to compute air-sea fluxes
+# Notes:
+#   - starting from year 78 (instead of 77) since year 77 starts with January 2nd, 
+# and all subsequent years start from Jan. 1st
+#   - QREFHT and TREFHT are only defined from years 77-86, but QBOT and TBOT are defined
+#     from year 46 - 76
+years = list(range(78,87))
 variables = [
     "LHFLX",
     "SHFLX",
@@ -15,7 +19,11 @@ variables = [
     "TAUX",
     "TAUY",
     "TS",
-    "U10"
+    "U10",
+    "QREFHT",
+    "TREFHT",
+    "UBOT",
+    "VBOT"
 ]
 
 def make_filename(variable, time):
