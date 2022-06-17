@@ -45,3 +45,4 @@ target_chunks = {"time": 30} # Full spatial domain: "lat": 768, "lon": 1152, -->
 recipe = XarrayZarrRecipe(
             file_pattern=pattern,
             target_chunks=target_chunks,
+            )
