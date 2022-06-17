@@ -45,4 +45,3 @@ target_chunks = {"time": 30} # Full spatial domain: "lat": 768, "lon": 1152, -->
 recipe = XarrayZarrRecipe(
             file_pattern=pattern,
             target_chunks=target_chunks,
-            subset_inputs = {"time": 13}) # with time chunks of 30, we need a total of 13 chunks (12x30-day chunks, 1x5-day chunk)
