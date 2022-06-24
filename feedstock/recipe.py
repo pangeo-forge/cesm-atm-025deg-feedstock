@@ -45,4 +45,4 @@ target_chunks = {"time": 73} # Full spatial domain: "lat": 768, "lon": 1152, -->
 recipe = XarrayZarrRecipe(
             file_pattern=pattern,
             target_chunks=target_chunks,
-            subset_inputs = {"time": 5}) # set 5 chunks per year, each with time of length 73 (to total 365)
+            )
